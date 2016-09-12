@@ -6,8 +6,8 @@ This repo contains a script that generates a git graph for the route map of the 
 I cheated a bit, so this is only the simplified "weekend" schedule, as of when I created it sometime in the fall of 2015.
 
 ### Note: 
-Git 2.9 broke this version, since it no longer allows merging unrelated histories by default. 
-It can obviously be forced to do so anyway, so I have to get around to updating and testing the script soon.
+Git 2.9 broke the original version, since it no longer allows merging unrelated histories by default. 
+Luckily, git can still be pursuaded to do so with `git merge  --allow-unrelated-histories` so I have now updatedthe script.
 
 # FAQ
 ## Why, oh why?
@@ -24,11 +24,13 @@ cd s-trains
 ```
  Wait for a short moment and enjoy...
 
-To view the graph I suggest: 
+To view the graph I suggest one of the following: 
 ```
+git log --all --graph --oneline --decorate
 git log --all --graph --date-order --oneline --decorate
 
 or
 
+gitk  --all
 gitk  --all  --date-order
 ```

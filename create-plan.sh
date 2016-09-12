@@ -41,13 +41,13 @@ echo "-- Ny Ellebjerg   --"; git checkout A; git cem 'Ny Ellebjerg'; git checkou
 echo "-- Sjælør         --"; git checkout A; git cem 'Sjælør'
 echo "-- Sydhavn        --"; git checkout A; git cem 'Sydhavn'
 echo "-- Vigerslev Allé --"; git checkout F; git cem 'Vigerslev Allé'
-echo "-- Danshøj        --"; git checkout B; git merge --no-ff -v -m 'Danshøj' F; git update-ref refs/heads/F HEAD;
+echo "-- Danshøj        --"; git checkout B; git merge --no-ff -v --allow-unrelated-histories -m 'Danshøj' F; git update-ref refs/heads/F HEAD;
 echo "-- Ålholm         --"; git checkout F; git cem 'Ålholm'
 echo "-- KB Hallen      --"; git checkout F; git cem 'KB Hallen'
-echo "-- Flintholm      --"; git checkout C; git merge --no-ff -v -m 'Flintholm' F; git update-ref refs/heads/F HEAD;
+echo "-- Flintholm      --"; git checkout C; git merge --no-ff -v --allow-unrelated-histories -m 'Flintholm' F; git update-ref refs/heads/F HEAD;
 echo "-- Peter Bangs Vej--"; git checkout C; git cem 'Peter Bangs Vej'
 echo "-- Langgade       --"; git checkout C; git cem 'Langgade'
-echo "-- Valby          --"; git checkout C; git merge --no-ff -v -m 'Valby' B; git update-ref refs/heads/B HEAD;
+echo "-- Valby          --"; git checkout C; git merge --no-ff -v --allow-unrelated-histories -m 'Valby' B; git update-ref refs/heads/B HEAD;
 echo "============="
 git status
 echo "============="
@@ -56,7 +56,7 @@ echo "============="
 git tag -l
 echo "============="
 echo "-- Enghave        --"; git checkout C; git cem 'Enghave'; 
-echo "-- Dybbølsbro     --"; git checkout C; git merge --no-ff -v -m 'Dybbølsbro' A; git update-ref refs/heads/A HEAD;
+echo "-- Dybbølsbro     --"; git checkout C; git merge --no-ff -v --allow-unrelated-histories -m 'Dybbølsbro' A; git update-ref refs/heads/A HEAD;
 
 echo "-- København H    --"; git checkout C; 
 echo "# Copenhagen S-Trains as a git commit graph" > README.md;
@@ -74,8 +74,8 @@ echo "-- Grøndal        --"; git checkout F; git cem 'Grøndal'
 echo "-- Fuglebakken    --"; git checkout F; git cem 'Fuglebakken'
 echo "-- Nørrebro       --"; git checkout F; git cem 'Nørrebro'
 echo "-- Bispebjerg     --"; git checkout F; git cem 'Bispebjerg'
-echo "-- Ryparken       --"; git checkout B; git merge --no-ff -v -m 'Ryparken' F; git update-ref refs/heads/F HEAD
-echo "-- Hellerup       --"; git checkout C; git merge --no-ff -v -m 'Hellerup' F A; git update-ref refs/heads/F HEAD; git update-ref refs/heads/A HEAD; 
+echo "-- Ryparken       --"; git checkout B; git merge --no-ff -v --allow-unrelated-histories -m 'Ryparken' F; git update-ref refs/heads/F HEAD
+echo "-- Hellerup       --"; git checkout C; git merge --no-ff -v --allow-unrelated-histories -m 'Hellerup' F A; git update-ref refs/heads/F HEAD; git update-ref refs/heads/A HEAD; 
 echo "-- Emdrup         --"; git checkout B; git cem 'Emdrup'
 echo "-- Bernstorffsvej --"; git checkout A; git cem 'Bernstorffsvej'
 echo "-- Charlottenlund --"; git checkout C; git cem 'Charlottenlund'
